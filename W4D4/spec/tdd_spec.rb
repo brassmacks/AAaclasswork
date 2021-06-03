@@ -36,13 +36,28 @@ describe "my_transpose" do
         [0, 3, 6],
         [1, 4, 7],
         [2, 5, 8]
-    ]) }
-
-    it "returns the result of switching indices of a 2D array"
+    ] }
+    let(:non_square) { [
+        [0, 1],
+        [3, 4, 5, 0],
+        [6, 7, 8]
+      ] } 
+    it "returns the result of switching indices of a 2D array" do
         expect(rows.my_transpose).to eq(cols)
     end
 
-    it "raise error if not a square 2D array"
-        expect()
+    it "raise error if not a square 2D array" do
+        expect{non_square.my_transpose}.to raise_error("rows and columns aren't the same length") 
+    end
+
+end
+
+describe "stock_picker" do
+    let(:arr) { [5, 2, 9, 7, 4, 15] }
+    it "returns most profitable buy and sell days" do
+        expect(arr.stock_picker).to eq([1, 5])
+    end
+    it "raises error if arg is not an array" do
+        expect{"".my_transpose}.to raise_error("arg is not an array") 
     end
 end
