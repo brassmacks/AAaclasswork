@@ -18,4 +18,24 @@ class Array
         pairs
     end
 
+    def my_transpose
+        unless self.all? { |arr| arr.length == self.length}
+            raise "rows and columns aren't the same length"
+        end
+
+        transposed = []
+        (0...self.length).each do |ind1|
+            temp = []
+            (0...self.length).each do |ind2|
+                temp << self[ind2][ind1]
+            end
+            transposed << temp
+        end
+        transposed
+    end
+
+    def stock_picker
+        # [6,5,15,2,9,4]
+    end
+    
 end
