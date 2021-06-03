@@ -34,8 +34,22 @@ class Array
         transposed
     end
 
-    def stock_picker
-        # [6,5,15,2,9,4]
+    def stock_picker # [6,5,15,2,9,4]           
+        
+        raise "arg is not an array" unless self.all? {|ele| ele.class == Integer}
+        pair = []
+        curr_max = 0 
+        (0...self.length).each do |ind1|
+            (ind1+1...self.length).each do |ind2|
+                diff = self[ind2] - self[ind1]
+                if diff > curr_max
+                    curr_max = diff 
+                    pair = [ind1, ind2]
+                end
+            end
+        end
+        
+        pair
     end
     
 end

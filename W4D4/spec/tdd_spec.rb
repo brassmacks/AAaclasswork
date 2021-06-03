@@ -53,11 +53,12 @@ describe "my_transpose" do
 end
 
 describe "stock_picker" do
-    let(:arr) { [5, 2, 9, 7, 4, 15] }
+    let(:arr) { [6,5,15,2,9,4] }
+    let(:str) { ["ham sandwich"]}
     it "returns most profitable buy and sell days" do
-        expect(arr.stock_picker).to eq([1, 5])
+        expect(arr.stock_picker).to eq([1, 2])
     end
     it "raises error if arg is not an array" do
-        expect{"".my_transpose}.to raise_error("arg is not an array") 
+        expect{str.stock_picker}.to raise_error("arg is not an array") 
     end
 end
