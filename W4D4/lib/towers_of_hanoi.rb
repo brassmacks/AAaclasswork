@@ -53,5 +53,5 @@ class Towers
 
 end
 
-game = Towers.new
-game.get_move
+# game = Towers.new
+# game.get_move
