@@ -47,19 +47,42 @@ list = [5, 3, -7]
 
 # p largest_continuous_sub_sum(list)
 
+# def largest_continuous_sub_sum(list)
+#     count = 1
+#     cur_max = list[0] + list[1] + list[2]
+#     cur_sum = 0
+#     limit = list.length-1
+
+#     while count < limit
+#         cur_sum = list[count-1] + list[count] + list[count+1]
+#         cur_max = cur_sum if cur_max < cur_sum
+#         count += 1
+#     end
+
+#     cur_max
+# end
+list = [2, 3, -6, 7, -6, 7]
+
 def largest_continuous_sub_sum(list)
-    count = 1
-    cur_max = list[0] + list[1] + list[2]
-    cur_sum = 0
-    limit = list.length-1
+    sums = []
+    sum = list[0] #-1
+    counter = 1 
+    while counter < list.length
+        if (sum + list[counter]) > sum && !(list[counter] > sum + list[counter])
+            sum += list[counter]
+        else
+            sums << sum
+            sum = list[counter]
+        end
 
-    while count < limit
-        cur_sum = list[count-1] + list[count] + list[count+1]
-        cur_max = cur_sum if cur_max < cur_sum
-        count += 1
+        counter+=1
     end
+    sums << sum 
+    sums.max
 
-    cur_max
 end
+
+
+
 
 p largest_continuous_sub_sum(list)
