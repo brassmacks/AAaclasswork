@@ -64,25 +64,33 @@ list = [5, 3, -7]
 list = [2, 3, -6, 7, -6, 7]
 
 def largest_continuous_sub_sum(list)
-    sums = []
-    sum = list[0] #-1
-    counter = 1 
+    valleys = []
+    counter = 1
+    curr_sum = list[0]
+    max_sum = 0
+
     while counter < list.length
-        if (sum + list[counter]) > sum && !(list[counter] > sum + list[counter])
-            sum += list[counter]
-        else
-            sums << sum
-            sum = list[counter]
+        if list[counter].abs > curr_sum && list[counter] < list[counter].abs
+            valleys << counter
+            curr_sum = list[counter+1] if counter < list.length-2
+        elsif curr_sum + list[counter] > curr_sum
+            curr_sum += list[counter] 
         end
-
-        counter+=1
+        max_sum = curr_sum if max_sum < curr_sum
+        counter += 1
     end
-    sums << sum 
-    sums.max
 
+    valleys.map do |valley|
+        val_total = list.take(valley) + [list[valley]] + list.drop(valley+1)
+        val_total = val_total.sum
+        if val_total > list.take(valley) && val_total > list.drop(valley+1)
+            if max_sum < val_total
+                max_sum = val_total
+            end
+        end
+    end
+
+    max_sum
 end
-
-
-
 
 p largest_continuous_sub_sum(list)
