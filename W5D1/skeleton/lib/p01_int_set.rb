@@ -79,13 +79,13 @@ class ResizingIntSet < IntSet
     count += 1
   end
   
-  # def remove(num)
-    
-  # end
+  def remove(num)
+    super(num)
+  end
   
-  # def include?(num)
-    
-  # end
+  def include?(num)
+    super(num)
+  end
   
   private
   
