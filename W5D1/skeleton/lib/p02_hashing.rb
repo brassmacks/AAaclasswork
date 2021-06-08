@@ -3,12 +3,26 @@ class Integer
 end
 
 class Array
-  def hash
+
+  def hash1
+    return self.object_id if self.length < 2
+    key = (self.length * 534)
+    hashed = []
+    self.flatten.each do |ele|
+      hashed << (ele.object_id * key).to_s.split.take(2)
+    end
+    p hash
+    p this = hashed.take(6)
+    p this.join("").to_i
   end
+
 end
+
+
 
 class String
   def hash
+
   end
 end
 
