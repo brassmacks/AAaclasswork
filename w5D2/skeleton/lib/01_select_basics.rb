@@ -62,14 +62,7 @@ def scandinavia
   execute(<<-SQL)
   SELECT name, population
   FROM countries
-<<<<<<< HEAD
   WHERE name IN ('Denmark', 'Finland', 'Norway', 'Sweden')
-=======
-  WHERE name = 'Denmark'
-  OR name = 'Finland'
-  OR name = 'Norway'
-  OR name = 'Sweden'
->>>>>>> ba7455783dac714cb2e20f4c5ad0928fa0a6f9b5
   SQL
 end
 
