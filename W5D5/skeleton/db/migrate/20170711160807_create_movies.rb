@@ -8,8 +8,7 @@ class CreateMovies < ActiveRecord::Migration[5.1]
       t.integer :director_id, null: false
     end
 
-    add_index :movies, :yr
-    add_index :movies, :title
     add_index :movies, :director_id
+    add_index :movies, :title
   end
 end
