@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   put "users/:id", to: "users#update"
   #what about here
   delete "users/:id", to: "users#destroy"
-  
+  # resources :users
 end
