@@ -1,16 +1,17 @@
 <h1> Create new cat </h1>
 
+yeild
 <form action = '<% cat_url %>' method = 'get'>
     <label for='cat[name]'>Cat's name: </label>
     <input type='text' name='cat[name]' value='<%= @cat.name %>'>
 <br>
 
     <label for='birth_date'>Birthday </label>
-    <input type='date' name='birth_date' value='<%=@cat.birth_date %>'>
+    <input type='date' name='cat[birth_date]' value='<%=@cat. birth_date %>'>
 <br>
 
     <label for='color'>Pick color </label>
-    <select name='colors'>
+    <select name='cat[colors]'>
         <% Cat::COLORS.each do |color| %>
         <option value= '<%= color %>'><%= color %></option>
         <% end %>

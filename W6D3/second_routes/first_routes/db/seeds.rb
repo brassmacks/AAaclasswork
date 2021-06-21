@@ -68,70 +68,70 @@ User.create!([{
     username: 'user 15'
 }])
 
-# Artwork.create! ([{
-#     title: 'tapas comes', 
-#     image_url: 'first.com', 
-#     artist_id: 2 
-# },{
-#     title: 'from separate', 
-#     image_url: 'second.com', 
-#     artist_id: 4 
-# },{
-#     title: 'jars of the cuisine', 
-#     image_url: 'third.com', 
-#     artist_id: 3
-# },{
-#     title: 'The original word', 
-#     image_url: 'fourth.com', 
-#     artist_id: 8
-# },{
-#     title: 'tapas comes from', 
-#     image_url: 'fifth.com', 
-#     artist_id: 10
-# },{
-#     title: 'It’s not introduced', 
-#     image_url: 'sixth.com', 
-#     artist_id: 3
-# },{
-#     title: 'in the early 1900s', 
-#     image_url: 'seventh.com', 
-#     artist_id: 12
-# },{
-#     title: 'Hot flavor many', 
-#     image_url: 'eigth.com', 
-#     artist_id: 14
-# },{
-#     title: 'dopeweed420', 
-#     image_url: 'ninth.com', 
-#     artist_id: 15
-# }])
+Artwork.create! ([{
+    title: 'tapas comes', 
+    image_url: 'first.com', 
+    artist_id: 2 
+},{
+    title: 'from separate', 
+    image_url: 'second.com', 
+    artist_id: 4 
+},{
+    title: 'jars of the cuisine', 
+    image_url: 'third.com', 
+    artist_id: 3
+},{
+    title: 'The original word', 
+    image_url: 'fourth.com', 
+    artist_id: 8
+},{
+    title: 'tapas comes from', 
+    image_url: 'fifth.com', 
+    artist_id: 10
+},{
+    title: 'It’s not introduced', 
+    image_url: 'sixth.com', 
+    artist_id: 3
+},{
+    title: 'in the early 1900s', 
+    image_url: 'seventh.com', 
+    artist_id: 12
+},{
+    title: 'Hot flavor many', 
+    image_url: 'eigth.com', 
+    artist_id: 14
+},{
+    title: 'dopeweed420', 
+    image_url: 'ninth.com', 
+    artist_id: 15
+}])
 
-# ArtworkShares.create!([{
-#     artwork_id: 1,
-#     viewer_id: 2
-# },{
-#     artwork_id: 2,
-#     viewer_id: 1
+ArtworkShares.create!([{
+    artwork_id: 1,
+    viewer_id: 2
+},{
+    artwork_id: 2,
+    viewer_id: 1
 
-# },{
-#     artwork_id: 3,
-#     viewer_id: 13
-# },{
-#     artwork_id: 4,
-#     viewer_id: 12
-# },{
-#     artwork_id: 5,
-#     viewer_id: 13
-# },{
-#     artwork_id: 3,
-#     viewer_id: 10
-# },{
-#     artwork_id: 7,
-#     viewer_id: 9
-# },{
-#     artwork_id: 1,
-#     viewer_id: 10
-# },{
-#     artwork_id: 9,
-#     viewer_id: 7
-# }])
+},{
+    artwork_id: 3,
+    viewer_id: 13
+},{
+    artwork_id: 4,
+    viewer_id: 12
+},{
+    artwork_id: 5,
+    viewer_id: 13
+},{
+    artwork_id: 3,
+    viewer_id: 10
+},{
+    artwork_id: 7,
+    viewer_id: 9
+},{
+    artwork_id: 1,
+    viewer_id: 10
+},{
+    artwork_id: 9,
+    viewer_id: 7
+}])

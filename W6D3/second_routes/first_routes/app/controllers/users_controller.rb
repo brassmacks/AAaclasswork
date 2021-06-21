@@ -5,8 +5,7 @@ class UsersController < ApplicationController
     end
 
     def create
-        user = User.new(params.require(:user).permit(:id, :name, :email))
-        
+        user = User.new(params.require(:user).permit(:id, :username))
         if user.save
             render json: user
         else
@@ -37,6 +36,6 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username)
+        params.require(:user).permit(:id, :username, :email)
     end
 end
