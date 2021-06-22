@@ -6,6 +6,9 @@ colors = ["red", "brown", "yellow", "orange", "spotty", "persian", "blonde"]
 sexs = ["M", "F"]
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# 20.times do Cat.create!(name: Faker::Name.name, birth_date: Faker::Date.backward(days: 4000), color: colors.sample, sex: sexs.sample)
+
+20.times do Cat.create!(name: Faker::Name.name, birth_date: Faker::Date.backward(days: 4000), color: colors.sample, sex: sexs.sample)
 
 end
+
+User.create!(username: "Kennyloggins", password: "123456")

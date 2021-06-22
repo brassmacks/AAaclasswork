@@ -4,7 +4,7 @@ class Cat < ApplicationRecord
   include ActionView::Helpers::DateHelper
 
   # .freeze renders a constant immutable.
-  CAT_COLORS = %w(black white orange brown).freeze
+  CAT_COLORS = ["red", "brown", "yellow", "orange", "spotty", "persian", "blonde"].freeze
 
   validates :color, inclusion: CAT_COLORS
   validates :sex, inclusion: %w(M F)
