@@ -1,21 +1,44 @@
 /* PHASE 0: Reset */
 
-html, body, header, nav, h1, a,
-ul, li, strong, main, button, i,
-section, img, div, h2, p, form,
-fieldset, label, input, textarea,
-span, article, footer, time, small {
-    box-sizing: inherit;
+html,
+body,
+header,
+nav,
+h1,
+a,
+ul,
+li,
+strong,
+main,
+button,
+i,
+section,
+img,
+div,
+h2,
+p,
+form,
+fieldset,
+label,
+input,
+textarea,
+span,
+article,
+footer,
+time,
+small {
+  box-sizing: inherit;
+  padding: 0px;
 }
 
 ul {
-    appearance: none;
+  appearance: none;
 }
 
 img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 input[type="password"],
@@ -24,10 +47,9 @@ input[type="text"],
 input[type="submit"],
 textarea,
 button {
-
 }
 
 button,
 input[type="submit"] {
-    cursor: pointer;
+  cursor: pointer;
 }
