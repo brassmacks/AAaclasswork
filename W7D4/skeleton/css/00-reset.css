@@ -5,15 +5,17 @@ ul, li, strong, main, button, i,
 section, img, div, h2, p, form,
 fieldset, label, input, textarea,
 span, article, footer, time, small {
-
+    box-sizing: inherit;
 }
 
 ul {
-
+    appearance: none;
 }
 
 img {
-
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 input[type="password"],
@@ -27,5 +29,5 @@ button {
 
 button,
 input[type="submit"] {
-
+    cursor: pointer;
 }

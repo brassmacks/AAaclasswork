@@ -1,2 +1,30 @@
 /* PHASE 1: Header */
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
 
+header {
+    display: flex;
+    justify-content: left;
+    background-color: red;
+    
+
+}
+
+ul li {
+
+    display: inline;
+    margin: 10px;
+    justify-content: right;
+}
+
+.nav {
+    height: inherit;
+    border-right: 1px solid white; 
+    border-left: 1px solid white; 
+    margin-left: auto;
+    margin-right: auto;
+
+}
