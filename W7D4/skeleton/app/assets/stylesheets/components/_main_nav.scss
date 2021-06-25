@@ -2,13 +2,14 @@
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  background-color: black;
+
 }
 
 .left-nav > ul,
 .right-nav > ul {
   display: flex;
   align-items: center;
+
 }
 
 .left-nav {
@@ -20,7 +21,7 @@
 }
 span {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 8px;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -29,13 +30,19 @@ span {
   > ul {
     > li {
       margin: 0 10px 0 10px;
+      background-color: #6288a5;
+      border-radius: 2px;
+      padding: 3px 6px 4px 6px;
+      color: white
     }
 
-    > li:last-of-type {
-    }
+  //   > li:last-of-type {
+      
+  //   }
   }
 
   i {
+    font-size: 15px;
   }
 }
 

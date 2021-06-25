@@ -15,7 +15,9 @@
 	border-bottom: none;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
-
+	.first {
+		font-weight: bold;
+	}
 	a {
 		margin: 0 5px;
 		text-transform: uppercase;
@@ -43,7 +45,7 @@
 
 	li {
 		margin-left: 10px;
-		border-right: 1px solid $light-gray;
+	
 	}
 
 	button {
