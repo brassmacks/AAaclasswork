@@ -9,12 +9,17 @@ if (typeof window === 'undefined'){
  * and two white pieces at [3, 3] and [4, 4]
  */
 function _makeGrid () {
+  // 
+  // Grid new Array(8) with 8 length
+  // coord = [x, y]
+  // 
 }
 
 /**
  * Constructs a Board with a starting grid set up.
  */
 function Board () {
+
   this.grid = _makeGrid();
 }
 

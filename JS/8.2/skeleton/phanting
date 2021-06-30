@@ -1,0 +1,100 @@
+function Elephant(name, height, tricks) {
+   this.name = name;
+   this.height = height;
+   this.tricks = tricks;
+}
+// bariable = 'the'
+// the = "horseflies"
+// console.log(eval(bariable))
+elephants = [ [ 'Pres. Garfield Stokes',
+    [ '10ft 10' ],
+    [ 'dwelling',
+      'buzzing',
+      'allowing',
+      'compelling',
+      'replying',
+      'proceeding',
+      'disappearing',
+      'sampling',
+      'inviting',
+      'justifying' ] ],
+  [ 'Sherwood Hartmann',
+    [ '13ft 7' ],
+    [ 'requesting',
+      'deleting',
+      'patting',
+      'consoling',
+      'googling',
+      'consigning',
+      'ignoring',
+      'consisting',
+      'remaining',
+      'dealing' ] ],
+  [ 'Tony Glover V',
+    [ '10ft 4' ],
+    [ 'smoothing',
+      'misusing',
+      'cooing',
+      'sucking',
+      'saying',
+      'studying',
+      'hitting',
+      'trampling',
+      'typing',
+      'reselling' ] ],
+  [ 'Sheri Pollich',
+    [ '9ft 9' ],
+    [ 'broadcasting',
+      'glittering',
+      'rubbing',
+      'taking',
+      'knocking',
+      'wanting',
+      'constructing',
+      'hopping',
+      'conducting',
+      'craving' ] ],
+  [ 'Rep. Gregoria Flatley',
+    [ '10ft 11' ],
+    [ 'splitting',
+      'wasting',
+      'retching',
+      'reducing',
+      'scrubbing',
+      'managing',
+      'viewing',
+      'informing',
+      'trying',
+      'painting' ]],
+  [ 'Portia Buckridge',
+  [ '10ft 8' ],
+  [ 'confusing',
+    'pretending',
+    'stating',
+    'squeezing',
+    'moulding',
+    'seeking',
+    'corresponding',
+    'waving',
+    'nursing',
+    'testing' ] ]];
+let names = []
+let phants = []
+elephants.forEach(elephant => names.push(elephant[0].split(" ")[0]));
+function elephantMker(elephants) {elephants.forEach((elephant, i) => {
+
+    let elName = elephant[0];
+    let hght = elephant[1];
+    let elHeight = hght[0]
+    let elTricks = elephant[2];
+    
+    phants.push(new Elephant(elName, elHeight, elTricks));
+    // eval(nme = new Elephant(elName, elHeight, elTricks));
+    });
+    };
+//   
+// })
+tater = "tatties"
+tatties = "jajoombas"
+console.log(eval(tater))
+
