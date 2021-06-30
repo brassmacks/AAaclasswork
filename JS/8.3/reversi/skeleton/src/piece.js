@@ -3,7 +3,7 @@
  */
 function Piece (color) {
     // this color = color
-    this.color = color
+    this.color = color;
 }
 
 /**
