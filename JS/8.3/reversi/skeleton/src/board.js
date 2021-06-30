@@ -13,6 +13,19 @@ function _makeGrid () {
   // Grid new Array(8) with 8 length
   // coord = [x, y]
   // 
+  // Array.new(8) {Array.new(8)}
+  const grid = new Array(8); 
+  for ( let i = 0; i < 8; i++ ) {
+    grid[i] = new Array(8);
+  }; 
+  let setter = () => { 
+  grid[3][4] = new Piece('black');
+  grid[4][3] = new Piece('black');
+  grid[3][3] = new Piece('white');
+  grid[4][4] = new Piece('white');
+  };
+  setter();
+  return grid;
 }
 
 /**
