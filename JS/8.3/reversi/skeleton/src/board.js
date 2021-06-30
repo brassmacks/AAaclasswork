@@ -53,6 +53,18 @@ Board.prototype.isValidPos = function (pos) {
  * throwing an Error if the position is invalid.
  */
 Board.prototype.getPiece = function (pos) {
+  // throw error if x or y is greater than 7
+  if ( !(this.isValidPos(pos))) {
+    return undefined
+  }
+
+  if (this.grid[pos[0]][pos[1]]) {
+      return this.grid[pos[0]][pos[1]];
+  } else if (this.grid[pos[0]][pos[1]] === undefined) 
+  else {
+    throw console.error("Not valid pos!");
+
+  }
 };
 
 /**
