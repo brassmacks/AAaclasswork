@@ -81,9 +81,11 @@ Board.prototype.getPiece = function (pos) {
  */
 
 Board.prototype.isMine = function (pos, color) {
-  if (this.isValidPos(pos) && this.getPiece(pos)) {
-  return (this.getPiece(pos).color == color);
-  };
+  if (this.isValidPos(pos) && this.getPiece(pos) != undefined) {
+  return (this.getPiece(pos).color === color);
+  } else {
+    return false;
+  }
 };
 
 /**
@@ -109,17 +111,35 @@ Board.prototype.isOccupied = function (pos) {
  * Returns empty array if it hits an empty position.
  *
  * Returns empty array if no pieces of the opposite color are found.
- */
-Board.prototype._positionsToFlip = function(pos, color, dir, piecesToFlip){
+ */                                        // [x, y] "w""b" [+,-] [ [pos]]
+Board.prototype._positionsToFlip = function(pos, color, dir, piecesToFlip=[]) { 
   // start with an empty array, 
   // have a conditional to check to see start.color pos + dir = start color
   // we have to call piecestoFlip(pos + dir, color, dir, piecesToFlip.push(pos))
+  debugger
+  let nextPos = [(pos[0] + dir[0]), (pos[1] + dir[1])]
 
-  Board.DIRS = [
-    [0, 1], [1, 1], [1, 0],
-    [1, -1], [0, -1], [-1, -1],
-    [-1, 0], [-1, 1]
-  ];
+  if (!(this.isValidPos(nextPos))) {
+    debugger
+    return [] };
+  let myCol = Piece.colorSwitch(color);
+  let ocupado = this.isOccupied(nextPos)
+  let mio = this.isMine(nextPos, myCol);
+
+  
+  // I added the function colorSwitch to the piece definition
+  // it just allows us to return the opposite of what ever color we pass
+
+  debugger
+  if (ocupado && mio) {
+    piecesToFlip.push(pos)
+    return piecesToFlip;
+  } else if (ocupado && !mio) {
+debugger
+    piecesToFlip.push(pos)
+    this._positionsToFlip(nextPos, color, dir, piecesToFlip)
+  }
+  return [];
 };
 
 /**
@@ -144,6 +164,8 @@ Board.prototype.placePiece = function (pos, color) {
  * the Board for a given color.
  */
 Board.prototype.validMoves = function (color) {
+    //this.DIRS forEach(dir) => 
+
 };
 
 /**

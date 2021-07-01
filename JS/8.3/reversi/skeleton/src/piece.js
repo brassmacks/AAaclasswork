@@ -6,6 +6,11 @@ function Piece (color) {
     this.color = color;
 }
 
+Piece.colorSwitch = function (color) {
+    if (color === "white") {
+        return "black"
+    } else{ return "white" }
+}
 /**
  * Returns the color opposite the current piece.
  */
