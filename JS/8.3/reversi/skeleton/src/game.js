@@ -1,5 +1,5 @@
 // DON'T TOUCH THIS CODE
-if (typeof window === 'undefined'){
+if (typeof window === 'undefined') {
   var readline = require("readline");
   var Piece = require("./piece.js");
   var Board = require("./board.js");
