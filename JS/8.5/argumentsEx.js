@@ -5,19 +5,19 @@
 
 // write a function that takes any number of arguments
 
-function adder(arguments) {
+// function adder(arguments) {
 
-    const summer = (accumulator, ele) => accumulator + ele;
-    let result = arguments.reduce(summer);
-    console.log(result);
+//     const summer = (accumulator, ele) => accumulator + ele;
+//     let result = arguments.reduce(summer);
+//     console.log(result);
 
-}
+// }
 
-function adder2(...args) {
-    let sum = 0;
-    args.forEach(ele=> sum += ele);
-    return sum;
-}
+// function adder2(...args) {
+//     let sum = 0;
+//     args.forEach(ele=> sum += ele);
+//     return sum;
+// }
 // sum(1, 2, 3, 4) === 10;
 
 
@@ -88,3 +88,33 @@ const notMarkovSays = markov.says.myBind(pavlov);
 notMarkovSays("meow", "me");
 // Pavlov says meow to me!
 // true
+
+
+function stephenCurry(numArgs){ //5
+    const summer = (accumulator, ele) => accumulator + ele;
+    let numbers = [];
+
+    let _currySum = function(num){
+        numbers.push(num);
+
+        if(numbers.length === numArgs){
+            debugger
+        let res = numbers.reduce(summer);
+        return res;
+
+        }else{
+            return _currySum;
+        };
+
+    // numbers.reduce()
+    debugger
+    }
+    return _currySum;
+} 
+
+const sum = stephenCurry(4);
+console.log(sum(5)(30)(10)(1));
+
+
+
+Function.prototype.curry(numArgs) 
