@@ -20,7 +20,7 @@ class Clock {
         // setInterval(1000) tick
     }
 
-    // 
+  
     
 
     printTime(time) {
