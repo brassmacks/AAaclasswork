@@ -10,6 +10,7 @@ function MovingObject(options) {
 
 }
 // MovingObject.prototype.move
+MovingObject.prototype.move = function(){}
 
 
 // MovingObject.prototype.draw(ctx)
