@@ -6,10 +6,10 @@ class View {
   setupBoard() {
     const ul = document.createElement("ul");
     // this.el.appendChild(ul);
-    for (let i=0; i<9; i++) {
+    for (let i = 0; i < 9; i++) {
       let li = document.createElement("li");
-     ul.appendChild(li);
-    
+      li.setAttribute("id", `s${i}`);
+      ul.appendChild(li);
     }
     this.el.appendChild(ul);
     // add ul - give that id 

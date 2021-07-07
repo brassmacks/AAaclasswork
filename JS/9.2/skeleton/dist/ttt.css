@@ -1,0 +1,58 @@
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+}
+
+li {
+    width: 194px;
+    list-style: none;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    padding-top: 98.5px;
+    padding-bottom: 98.5px;
+    background-color: gray;
+}
+
+li:hover {
+    background-color: yellow;
+}
+
+#s1 {
+    border-left: none;
+    border-right: none;
+}
+
+#s3 {
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+}
+
+#s4 {
+    border-top: none;
+    border-bottom: none;
+}
+
+#s5 {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+#s7 {
+    border-left: none;
+    border-right: none;
+}
+

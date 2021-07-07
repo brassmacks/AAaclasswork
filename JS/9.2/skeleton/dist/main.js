@@ -25,7 +25,7 @@ eval("const View = __webpack_require__(/*! ./ttt-view.js */ \"./src/ttt-view.js\
   \*************************/
 /***/ ((module) => {
 
-eval("class View {\n  constructor(game, el) {\n    this.game = game;\n    this.el = el; \n  }\n  setupBoard() {\n    const ul = document.createElement(\"ul\");\n    // this.el.appendChild(ul);\n    for (let i=0; i<9; i++) {\n      let li = document.createElement(\"li\");\n     ul.appendChild(li);\n    \n    }\n    this.el.appendChild(ul);\n    // add ul - give that id \n    // add lis to ul -label for later reference\n  }\n  \n  bindEvents() {}\n\n  handleClick(e) {}\n\n  makeMove(square) {}\n\n}\n\nmodule.exports = View;\n\n\n//# sourceURL=webpack:///./src/ttt-view.js?");
+eval("class View {\n  constructor(game, el) {\n    this.game = game;\n    this.el = el; \n  }\n  setupBoard() {\n    const ul = document.createElement(\"ul\");\n    // this.el.appendChild(ul);\n    for (let i = 0; i < 9; i++) {\n      let li = document.createElement(\"li\");\n      li.setAttribute(\"id\", `s${i}`);\n      ul.appendChild(li);\n    }\n    this.el.appendChild(ul);\n    // add ul - give that id \n    // add lis to ul -label for later reference\n  }\n  \n  bindEvents() {}\n\n  handleClick(e) {}\n\n  makeMove(square) {}\n\n}\n\nmodule.exports = View;\n\n\n//# sourceURL=webpack:///./src/ttt-view.js?");
 
 /***/ }),
 
