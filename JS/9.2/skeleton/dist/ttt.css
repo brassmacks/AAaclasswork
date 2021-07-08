@@ -2,6 +2,33 @@ h1 {
     display: flex;
     justify-content: center;
 }
+.selectedX {
+    background-color: white;
+    color: red
+}
+.selectedO {
+    background-color: white;
+    color: green;
+}
+.X {
+    color:red;
+}
+.O {
+    color:green
+}
+
+h2 {
+    background-color: grey;
+ 
+    opacity: 95%;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 100px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -449px;
+}
 
 figure {
     display: flex;
@@ -15,13 +42,19 @@ ul {
 }
 
 li {
+    font-family: 'Open Sans';
+    font-size: 145px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 194px;
     width: 194px;
     list-style: none;
     border-style: solid;
     border-width: 3px;
     border-color: black;
-    padding-top: 98.5px;
-    padding-bottom: 98.5px;
+    /* padding-top: 98.5px;
+    padding-bottom: 98.5px; */
     background-color: gray;
 }
 
