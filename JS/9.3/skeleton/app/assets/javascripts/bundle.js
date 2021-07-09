@@ -7,14 +7,14 @@
   \***********************************/
 /***/ ((module) => {
 
-
 function FollowToggle(el) {
-    this.userId = el.user-id;
-    this.followState = el.initial-follow-state;
-    this.$el = $(el);
+  this.$el = $(el);
+  this.userId = this.$el.data('userId');
+  this.followState = this.$el.data('initialFollowState');
 }
 
 module.exports = FollowToggle;
+
 
 /***/ })
 
@@ -55,14 +55,13 @@ const FollowToggle = __webpack_require__(/*! ./follow_toggle */ "./frontend/foll
 
 // function responsible for behaviour of  each follow unfollow, pass=> current user and user to be followed/unfollowed; 
 
-$('button.follow-toggle')
-.each(function (idx, el) {
+$(() => {
+  $('button.follow-toggle')
+  .each(function (idx, el) {
     new FollowToggle(el);
-    });
+  });
+});
 
-// $(() => {
-//     .each()
-// } 
 })();
 
 /******/ })()
