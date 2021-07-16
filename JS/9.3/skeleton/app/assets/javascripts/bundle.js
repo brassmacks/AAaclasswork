@@ -5,16 +5,9 @@
 /*!***********************************!*\
   !*** ./frontend/follow_toggle.js ***!
   \***********************************/
-/***/ ((module) => {
+/***/ (() => {
 
-function FollowToggle(el) {
-  this.$el = $(el);
-  this.userId = this.$el.data('userId');
-  this.followState = this.$el.data('initialFollowState');
-}
-
-module.exports = FollowToggle;
-
+throw new Error("Module parse failed: Unexpected token (15:10)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n| FollowToggle.prototype.handleClick = function(e) {\n|     e.preventDefault();\n>     $.ajax{}\n| \n| };");
 
 /***/ })
 
