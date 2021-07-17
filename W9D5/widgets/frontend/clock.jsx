@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Clock extends React.Component {
+export default class Clock extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,28 +10,32 @@ class Clock extends React.Component {
   };
 
   componentDidMount() {
-    this.clockId = setInterval(this.tick, 1000)
+    this.intervalId = setInterval(()=> this.tick(), 1000)
   };
-
   componentWillUnmount() {
-    clearInterval(this.clockId)
+    clearInterval(this.intervalId)
   };
 
+  
   tick() {
-    this.setState = { date: new Date()}
+    this.setState({ date: new Date()})
   };
-
+  
   render(){
     let hours = this.state.date.getHours()
     let min = this.state.date.getMinutes()
     let sec = this.state.date.getSeconds()
+    let amPM = hours < 12 ? 'a.m.' : 'p.m.'
+    hours = hours % 12 === 0 ? 12 : hours % 12
     return (
-    <div>
-      <h1>Clock</h1>
-      <h2>{this.state.date.toDateString()}</h2>
-        <h3>{hours}:{min}:{sec}</h3>
+      <div>
+        
+        <h2>{this.state.date.toDateString()}</h2>
+        <h3>{hours}:{min}:{sec}{amPM}</h3>
+        
+
     </div>)
-  }
+  };
 };
 
-export default Clock
+

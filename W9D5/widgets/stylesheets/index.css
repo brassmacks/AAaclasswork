@@ -1,0 +1,53 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Qahiri&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: -10px;
+  outline: 0;
+  font: sans-serif;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+  list-style: none;
+}
+div div div h2{
+
+/* align-content: center; */
+position:absolute;
+right: 6%;
+margin-top: -20px;
+
+}
+div div div h3 {
+  position: absolute;
+  margin-top: -20px;
+   left:6%;
+  font-size: 22px;
+  font-weight: bold;
+  
+}
+div div div {
+  position: relative;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding:1em;
+  flex-direction: row;
+  align-content: space-between;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  border: 15px, dashed, black;
+  border-radius: 2px;
+  border-style: ridge;
+  
+  
+}
+
