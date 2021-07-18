@@ -44,16 +44,22 @@ function Root() {
     // debugger
     let out = filler;
     tabs.forEach((tab) => {
-      if (tab.Selected) out = tab.Description
+      if (tab.Selected) out = <p className="tabscription">{tab.Description}</p>
      })
       
     return out
   }
   const toggleSelected = (Key) => {
-    setTabs(tabs.map((tab) => tab.Selected = false)); 
-    setTabs(
+
+  setTabs(
+    tabs.map((tab) => {
+      if (tab.Selected === true && tab.Key === Key) {
+        tab.Selected = true
+      } else {tab.Selected = false}
+      })); 
+  setTabs(
     tabs.map((tab) => 
-    tab.Key === Key ? { ...tab, Selected:
+    tab.Key === Key  ? { ...tab, Selected:
       !tab.Selected} : tab )
     )
   }
