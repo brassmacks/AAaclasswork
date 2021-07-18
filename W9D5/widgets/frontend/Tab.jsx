@@ -1,18 +1,17 @@
 import React from 'react'
 
 
-export const Tab = ({tab}) => {
-
+export const Tab = ({tab, toggleSelected}) => {
+  
     return (
-      <div className="display">
-        <div className='tab'>
-          <h3>Title: {tab.title}</h3>
-          <h3>Description: {tab.description}</h3>
-          
-          
+      
+        <div className='tab' id=""
+          onClick = {()=>toggleSelected(tab.Key)} >
+          <h3 key={tab.Key} id='tab-title'>Title: {tab.Title}</h3>
+          <></>
           </div>
   
-      </div>
+      
     );
   };
 

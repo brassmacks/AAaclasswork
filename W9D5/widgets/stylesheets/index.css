@@ -7,6 +7,8 @@ section, img, div, p, form,
 fieldset, label, input, textarea,
 span, article, footer, time, small {
   margin: 0;
+  margin-right: .3px;
+
   padding: 0;
   border: -10px;
   outline: 0;
@@ -54,7 +56,13 @@ h3.title {
   display: block;
   position: fixed;
 }
+div.tab-display {
+  display: flex;
+  flex-grow:inherit
+  
+}
 .tab {
+  flex-grow: 1;
   display:inline-block;
   padding-top: 2em;
   padding-left: 2em;
@@ -65,4 +73,12 @@ h3.title {
   border-radius: 2px;
   border-style: ridge;
 }
-
+.tab:hover{
+  background-color: lightgray;
+  
+}
+div#description{
+  margin-top: 2px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
