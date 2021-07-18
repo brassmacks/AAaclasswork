@@ -19,7 +19,7 @@ span, article, footer, time, small {
   background: transparent;
   list-style: none;
 }
-div div div h2{
+h2.date{
 
 /* align-content: center; */
 position:absolute;
@@ -27,7 +27,7 @@ right: 6%;
 margin-top: -20px;
 
 }
-div div div h3 {
+h3.clock {
   position: absolute;
   margin-top: -20px;
    left:6%;
@@ -35,7 +35,7 @@ div div div h3 {
   font-weight: bold;
   
 }
-div div div {
+div.calender-widget {
   position: relative;
   padding-top: 2em;
   padding-left: 2em;
@@ -49,5 +49,20 @@ div div div {
   border-style: ridge;
   
   
+}
+h3.title {
+  display: block;
+  position: fixed;
+}
+.tab {
+  display:inline-block;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding:1em;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  border: 15px, dashed, black;
+  border-radius: 2px;
+  border-style: ridge;
 }
 

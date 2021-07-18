@@ -28,10 +28,10 @@ export default class Clock extends React.Component {
     let amPM = hours < 12 ? 'a.m.' : 'p.m.'
     hours = hours % 12 === 0 ? 12 : hours % 12
     return (
-      <div>
+      <div className="calender-widget">
         
-        <h2>{this.state.date.toDateString()}</h2>
-        <h3>{hours}:{min}:{sec}{amPM}</h3>
+        <h2 className='date'>{this.state.date.toDateString()}</h2>
+        <h3 className='clock'>{hours}:{min}:{sec}{amPM}</h3>
         
 
     </div>)
