@@ -1,19 +1,19 @@
 import React from 'react'
-// import Board from './board.jsx'
 
-export class Tile extends React.Component{
-    
+export class Tile extends React.Component{  
     constructor(props) {
-    super(props)
+        super(props)
+        this.pos = props.pos
     }
     
-  
-  render(){
-    return (
-      <div className="tile"> x</div>
-    )
-  }
+    getStatus(){
+        const status = this.props.board.grid[this.pos[0]][this.pos[1]].explored
+        return status
+    }
 
-
-
-  }
+    render(){
+        return (
+        <div className="tile" id={`explored-${this.getStatus()}`}>x</div>
+        )
+    }
+}

@@ -1,13 +1,12 @@
 import React from "react"
 import {Tile} from "./tile.jsx"
-// debugger
 
 class Board extends React.Component {
     constructor(props) {
       super(props)
       // props = board, update game
-      console.log(props)
     }  
+
     renderBoard() {
       return this.props.board.grid.map((row, idx) => {
       
@@ -21,7 +20,7 @@ class Board extends React.Component {
 
   renderTile(row, idx) {
     return row.map((tile, idx2) => {
-      return <div className="tile" key={idx2}><Tile board={this.props.board}  update={this.props.board} /></div>
+      return <div className="tile" key={idx,idx2}><Tile pos={[idx,idx2]} board={this.props.board}  update={this.props.board} /></div>
     }) 
   }
     render(){
@@ -34,4 +33,4 @@ class Board extends React.Component {
   }
 }
 
-  export default Board
+export default Board

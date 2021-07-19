@@ -1,17 +1,13 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Board from './board'
 import * as Minesweeper from '../minesweeper' 
-
 
 export class Game extends React.Component {
   constructor(props){
     super(props)
-    // debugger
     this.state = { board: new Minesweeper.Board(9, 5) }
-    // debugger
-    // this.state.board = this.state.board.bind(this)
     this.updateGame = this.updateGame.bind(this)
+    console.log(this.state.board)
   }
 
   updateGame(){
@@ -20,7 +16,7 @@ export class Game extends React.Component {
 
   render() {
     return(
-    <div>
+    <div className='board'>
       <h1>Minesweeper</h1>
       <p>Click to explore a tile.</p>
       <p>Alt + Click to flag a Tile</p>
