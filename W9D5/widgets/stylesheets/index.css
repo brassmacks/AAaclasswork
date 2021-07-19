@@ -29,11 +29,11 @@ right: 6%;
 margin-top: -20px;
 
 }
-h3.clock {
+h2.clock {
   position: absolute;
   margin-top: -20px;
    left:6%;
-  font-size: 22px;
+  /* font-size: 22px; */
   font-weight: bold;
   
 }
@@ -49,46 +49,59 @@ div.calender-widget {
   border: 15px, dashed, black;
   border-radius: 2px;
   border-style: ridge;
+  border-bottom: none;
   
   
 }
 .tabscription{
   background-color: lightgray;
   margin:-5px -10px;
-
+  height: fit-content;
+  border:15px, dashed, black;
+  border-radius: 2px;
+  border-style: ridge;
   padding:5px 10px;
+  border-top: none;
 }
 
-div#selected-true {
+div#selected-true.tab {
   background-color: lightgray;
   border-bottom: none;
 }
 
-h3.title {
-  display: block;
-  position: fixed;
-}
 
 div.tab-display {
+  margin-top: -7px;
+  border-top: none;
   display: flex;
-  flex-grow:inherit
-  
+  flex-grow:inherit;
+  height: fit-content;
+
 }
 
-.tab {
+div.tab {
   flex-grow: 1;
-  display:inline-block;
+  display: flex;
   padding-top: 2em;
   padding-left: 2em;
   padding:1em;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
   border: 15px, dashed, black;
-  border-radius: 2px;
+  border-radius: 11% 11% 2px 2px;
   border-style: ridge;
+  height: 22px;
 }
-
+h3#tab-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: none;
+  padding: none;
+  background-color: aquamarine;
+}
 .tab:hover{
+  cursor: pointer;
   background-color: lightgray;
 
 }
