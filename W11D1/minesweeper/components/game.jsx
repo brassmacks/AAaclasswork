@@ -1,18 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Board} from './board.jsx'
+import Board from './board'
+import * as Minesweeper from '../minesweeper' 
 
 
-class Game extends React.Component {
+export class Game extends React.Component {
   constructor(props){
     super(props)
-    this.state.board = new Board(9, 81)
-    this.state.board = this.state.board.bind(this)
+    // debugger
+    this.state = { board: new Minesweeper.Board(9, 5) }
+    // debugger
+    // this.state.board = this.state.board.bind(this)
     this.updateGame = this.updateGame.bind(this)
   }
 
   updateGame(){
-
+    
   }
 
   render() {
@@ -21,13 +24,9 @@ class Game extends React.Component {
       <h1>Minesweeper</h1>
       <p>Click to explore a tile.</p>
       <p>Alt + Click to flag a Tile</p>
-      <Board state={this.state.board} update={this.updateGame} />
+      <Board board={this.state.board} update={this.updateGame} />
     </div>
     )
     }
 }
 
-document.addEventListener("DOMContentLoaded",function(){
-  const root = document.querySelector(".root")
-  ReactDOM.render(<Game />, root)
-})

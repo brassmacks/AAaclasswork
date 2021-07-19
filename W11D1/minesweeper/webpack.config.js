@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './components/game.jsx', // specify entry to widgets.jsx
+  entry: './react_minesweeper.jsx', // specify entry to widgets.jsx
   output: {
     path: path.resolve(__dirname), // resolves path into an absolute
     filename: 'bundle.js'
