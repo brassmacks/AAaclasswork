@@ -1,6 +1,7 @@
 
 import React from 'react'
-const APIkey = 'a65d7e4185eee817c68338cd944350e3'
+import { render } from 'react-dom';
+import { APIkey } from './frontend/apiKey';
 export const Weather = () => {
   
   let options = {
@@ -13,9 +14,8 @@ export const Weather = () => {
   
   request.onload = function() {
     if (this.status >= 200 && this.status < 400) {
-      let weather = this.response.json
-      debugger
-      console.log(weather)
+      return JSON.parse(this.response).current 
+      // debugger
     } else {
       console.log("error")
     }
@@ -27,7 +27,7 @@ export const Weather = () => {
   
   const fetch =(crd) => {
     console.log(crd)
-    let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${crd.latitude}&lon=${crd.longitude}&exclude={part}&appid=${APIkey}`
+    let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${crd.latitude}&lon=${crd.longitude}&exclude=&hourly&daily&alerts'}&appid=${APIkey}&units=imperial`
     
     // console.log(url)
     request.open('GET', url, true)
@@ -45,12 +45,22 @@ export const Weather = () => {
     console.warn(`ERROR(${err.code}): ${err.message}`);
   }
   
-  const point = navigator.geolocation.getCurrentPosition(success, error, options);
+  
+  const weatherFormat = (jsn) => {
+    let temp = Math.ceil(jsn.temp).toString()+ "° F";
+    let sky = jsn.weather[0].description 
+    let speed = "Winds @ " + jsn.wind_speed.toString()+ " mph" 
+    return `${temp} with ${sky} and ${speed}`
+  }
+  
+  
+  const point = () => navigator.geolocation.getCurrentPosition(success, error, options)
+  {/* <h1>{weatherFormat(point())}</h1> */}
   
   return (
     <div>
-      {point}
     </div>
   )
 }
+
 
