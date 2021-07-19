@@ -63,14 +63,15 @@ function Root() {
       !tab.Selected} : tab )
     )
   }
-  
+  // const showWeather = () => 
 
   return(
     <div id="body">
-    <div id="clock"> <Clock /></div>
+      <button value={Weather}   >Click for local Weather</button>
+    <div id="clock"> <Clock />
+    </div>
     <div id="goal"> <div id="tabhouse"><Tabs tabs={tabs} toggleSelected={toggleSelected} /> </div>
     <div id="description">{isSelected(tabs)}</div>
-    <Weather /> 
     </div>
     </div>
     
