@@ -1,13 +1,18 @@
 export const RECEIVE_TODOS = "RECEIVE_TODOS";
 export const RECEIVE_TODO = "RECEIVE_TODO";
+export const REMOVE_TODO = "REMOVE_TODO";
 
-const receive_todos = (todos) => ({
+export const receive_todos = (todos) => ({
     type: RECEIVE_TODOS,
     todos
 });
 
-const receive_todo = (todo) => ({
+export const receive_todo = (todo) => ({
     type: RECEIVE_TODO,
     todo
 });
 
+export const remove_todo = (todo) => ({
+    type: REMOVE_TODO,
+    todo
+})
