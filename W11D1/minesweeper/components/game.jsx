@@ -11,11 +11,13 @@ export class Game extends React.Component {
   }
 
   updateGame(){
-
+    // if flagged disp flag
     this.setState({board: this.state.board});
   }
 
   render() {
+
+    //modal
     return(
     <div className='board'>
       <h1>Minesweeper</h1>

@@ -152,6 +152,7 @@ var Game = /*#__PURE__*/function (_React$Component) {
   _createClass(Game, [{
     key: "updateGame",
     value: function updateGame() {
+      // if flagged disp flag
       this.setState({
         board: this.state.board
       });
@@ -159,6 +160,7 @@ var Game = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      //modal
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "board"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Minesweeper"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Click to explore a tile."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Alt + Click to flag a Tile"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_board__WEBPACK_IMPORTED_MODULE_1__.default, {
