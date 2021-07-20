@@ -3,17 +3,27 @@ body{
     justify-content: center;
 }
 
-div#explored-false{
-    background-color: rosybrown;
+div.unexplored{
+    
+    
+    background-color: #d3d3d3;
+    border: rgb(231, 224, 224) solid 2px;
+    border-style: outset;
 }
-
+div.explored{
+    background-color: #d3d3d3;
+    border: black solid 1px;
+    border: inset;
+}
 div.tile{
+    
+    line-height: 20px;
     width: 20px;
     height: 20px;
-    border: black solid 1px;
+    padding: 0 0 0 3px;
 }
 
-div#explored-false:hover{
+div.unexplored:hover{
     background-color: rgb(26, 231, 71);
 }
 

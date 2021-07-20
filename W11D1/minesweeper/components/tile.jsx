@@ -3,17 +3,29 @@ import React from 'react'
 export class Tile extends React.Component{  
     constructor(props) {
         super(props)
-        this.pos = props.pos
+        console.log(this.props.tile.explored)
+        this.getStatus = this.getStatus.bind(this)
     }
     
     getStatus(){
-        const status = this.props.board.grid[this.pos[0]][this.pos[1]].explored
-        return status
+      
+      if (this.props.tile.flagged) {return "flagged"}
+      if (this.props.tile.explored) {
+        if (this.props.tile.bombed) return "bombed"
+        return "explored"
+      } 
+      return "unexplored"      
     }
 
+    handleClick(e){
+      
+      this.props.tile.explore();
+      this.props.update()
+      
+    }
     render(){
         return (
-        <div className="tile" id={`explored-${this.getStatus()}`}>x</div>
+          <div className={`tile ${this.getStatus()}`} onClick = {(e)=>{this.handleClick(e)}} ></div>
         )
     }
 }

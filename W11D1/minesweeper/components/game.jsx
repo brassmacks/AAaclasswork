@@ -11,7 +11,8 @@ export class Game extends React.Component {
   }
 
   updateGame(){
-    
+
+    this.setState({board: this.state.board});
   }
 
   render() {

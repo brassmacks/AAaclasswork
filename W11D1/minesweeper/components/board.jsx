@@ -20,7 +20,7 @@ class Board extends React.Component {
 
   renderTile(row, idx) {
     return row.map((tile, idx2) => {
-      return <div className="tile" key={idx,idx2}><Tile pos={[idx,idx2]} board={this.props.board}  update={this.props.board} /></div>
+      return <div className="tile" key={idx,idx2}><Tile tile={tile} board={this.props.board}  update={this.props.update} /></div>
     }) 
   }
     render(){

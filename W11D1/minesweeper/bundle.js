@@ -72,9 +72,9 @@ var Board = /*#__PURE__*/function (_React$Component) {
           className: "tile",
           key: (idx, idx2)
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tile_jsx__WEBPACK_IMPORTED_MODULE_1__.Tile, {
-          pos: [idx, idx2],
+          tile: tile,
           board: _this2.props.board,
-          update: _this2.props.board
+          update: _this2.props.update
         }));
       });
     }
@@ -151,7 +151,11 @@ var Game = /*#__PURE__*/function (_React$Component) {
 
   _createClass(Game, [{
     key: "updateGame",
-    value: function updateGame() {}
+    value: function updateGame() {
+      this.setState({
+        board: this.state.board
+      });
+    }
   }, {
     key: "render",
     value: function render() {
@@ -214,23 +218,42 @@ var Tile = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Tile);
 
     _this = _super.call(this, props);
-    _this.pos = props.pos;
+    console.log(_this.props.tile.explored);
+    _this.getStatus = _this.getStatus.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(Tile, [{
     key: "getStatus",
     value: function getStatus() {
-      var status = this.props.board.grid[this.pos[0]][this.pos[1]].explored;
-      return status;
+      if (this.props.tile.flagged) {
+        return "flagged";
+      }
+
+      if (this.props.tile.explored) {
+        if (this.props.tile.bombed) return "bombed";
+        return "explored";
+      }
+
+      return "unexplored";
+    }
+  }, {
+    key: "handleClick",
+    value: function handleClick(e) {
+      this.props.tile.explore();
+      this.props.update();
     }
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "tile",
-        id: "explored-".concat(this.getStatus())
-      }, "x");
+        className: "tile ".concat(this.getStatus()),
+        onClick: function onClick(e) {
+          _this2.handleClick(e);
+        }
+      });
     }
   }]);
 
