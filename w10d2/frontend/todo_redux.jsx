@@ -1,2 +1,7 @@
 import { Component } from "react";
-import {hot} from "react-hot-loader";
+import root_reducer from '../frontend/reducers/root_reducer'
+// import {hot} from "react-hot-loader";
+
+document.addEventListener('DOMContentLoaded', () =>{
+
+});

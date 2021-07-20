@@ -20,8 +20,7 @@ module.exports = {
   },
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
-    path: path.resolve(__dirname, "dist/"),
-    publicPath: "/W10D2/", // main filetree folder
+    path: path.resolve(__dirname),
     filename: "bundle.js"
   },
   devServer: {
@@ -29,6 +28,5 @@ module.exports = {
     port: 3000,
     publicPath: "http://localhost:3000/dist/",
     hotOnly: true
-  },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+  }
 };
