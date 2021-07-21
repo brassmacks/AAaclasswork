@@ -30,33 +30,33 @@ document.addEventListener('DOMContentLoaded', () =>{
   window.receive_step = receive_step;
   window.remove_step = remove_step;
 
-  console.log('test 1: before ');
-  console.log(store.getState());
+  // console.log('test 1: before ');
+  // console.log(store.getState());
   store.dispatch(receive_todos(newTodos));
   store.dispatch(receive_steps(newSteps));
-  console.log('after ');
-  console.log(store.getState()); // should return only the new todos and steps
+  // console.log('after ');
+  // console.log(store.getState()); // should return only the new todos and steps
 
-  console.log('test 2: before ');
-  console.log(store.getState());
+  // console.log('test 2: before ');
+  // console.log(store.getState());
   store.dispatch(receive_todo({ id: 3, title: "New Todo", ...etc }));
   store.dispatch(receive_step({ id: 3, title: "New Step", todo_id: 2, done: false, ...etc }));
-  console.log('after ');
-  console.log(store.getState()); // should include the newly added todo and step
+  // console.log('after ');
+  // console.log(store.getState()); // should include the newly added todo and step
 
-  console.log('test 3: before ');
-  console.log(store.getState());
+  // console.log('test 3: before ');
+  // console.log(store.getState());
   store.dispatch(receive_todo({ id: 3, title: "Newer Todo", ...etc }));
   store.dispatch(receive_step({ id: 3, title: "Newer Step", done: true, ...etc }));
-  console.log('after ');
-  console.log(store.getState()); // should update the previously added todo and step
+  // console.log('after ');
+  // console.log(store.getState()); // should update the previously added todo and step
 
-  console.log('test 4: before ');
-  console.log(store.getState());
-  store.dispatch(remove_todo({ id: 3, title: "Newer Todo", ...etc }));
-  store.dispatch(remove_step({ id: 3, title: "Newer Step", ...etc }));
-  console.log('after ');
-  console.log(store.getState()); // should not include the previously added todo
+  // console.log('test 4: before ');
+  // console.log(store.getState());
+  // store.dispatch(remove_todo({ id: 3, title: "Newer Todo", ...etc }));
+  // store.dispatch(remove_step({ id: 3, title: "Newer Step", ...etc }));
+  // console.log('after ');
+  // console.log(store.getState()); // should not include the previously added todo
 
 });
 
