@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () =>{
   const rootElement = document.getElementById("rootElement")
   ReactDOM.render(<Root store={store} />, rootElement);
   window.allTodos = allTodos;
+  // need to pass a state 
 });
 
 // Test your code - Import the store to your entry file.Create your store by calling configureStore, set window.store = store in your entry file and then call window.store.getState() in your console.Make sure that this function returns the initial application state described above.Don't move on until it does!
