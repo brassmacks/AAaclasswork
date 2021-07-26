@@ -8,7 +8,7 @@ const moveReducer = (state = {}, action) => {
       return Object.assign({}, action.pokemon.moves, state);
     case RECEIVE_POKEMON:
       let nextState = Object.assign({}, state)
-      nextState[action.pokemon.id] = action.pokemon.moves
+      nextState = action.pokemon.moves
       return nextState;
     default:
       return state;
