@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PokemonDetailContainer from './pokemon_detail_container';
 
 class PokemonDetail extends React.Component {
   constructor(props){
@@ -9,8 +9,9 @@ class PokemonDetail extends React.Component {
   render() {
     return(
       <div>
-        
+        <PokemonDetailContainer />
       </div>
     )
   }
 }
+export default PokemonDetail;
